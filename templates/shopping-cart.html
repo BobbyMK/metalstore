@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Корзина</title>
+{% endblock title %}
+
+{% block content %}
+<!-- pages-title-start -->
+<section class="contact-img-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="con-text">
+                    <h2 class="page-title">Корзина</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- pages-title-end -->
+<!-- shopping-cart content section start -->
+<div class="shopping-cart-area s-cart-area">
+    <div class="container" id="rmvall">
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <div class="s-cart-all">
+                    <div class="cart-form table-responsive">
+                        <table id="shopping-cart-table" class="data-table cart-table">
+                            <tr>
+                                <th class="low1">Товар</th>
+                                <th class="low7">Количество</th>
+                                <th class="low7">Цена</th>
+                                <th class="low7">Cумма</th>
+                            </tr>
+							{% for product in products_in_basket%}
+								<tr class="cart_single_item">
+									<td class="sop-cart an-shop-cart">
+										<a href="#"><img class="primary-image" alt="" src="{{product.image.image.url}}"></a>
+										<a href="#">{{product.product.name}}</a>
+									</td>
+									<td class="sop-cart an-sh">
+                                        <form id="form_cart_change" action="{% url 'basket_adding' %}">{% csrf_token %}
+                                            <div class="quantity ray">
+                                                <input class="input-text qty text" id="cart_input" data-prod_id="{{ product.product.id }}"
+                                                data-image_id="{{product.image.id}}" data-nmb="{{product.nmb}}" type="number" size="4" value="{{product.nmb}}" min="0" step="1">
+                                            </div>
+                                            <div class="cart_remove" data-product_id="{{ product.id }}">
+                                                <a class="remove" href="#">
+                                                    <span>x</span>
+                                                </a>
+                                            </div>
+                                        </form>
+									</td>
+									<td class="sop-cart">
+										<div class="tb-product-price font-noraure-3">
+											<span class="amount">{{product.price_per_item}}RUB</span>
+										</div>
+									</td>
+									<td class="cen">
+										<span class="amount" id="amount">{{product.total_price}}RUB</span>
+									</td>
+								</tr>
+							{% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="second-all-class">
+                <div class="col-md-5 col-sm-12 col-xs-12" id="tofloatright">
+                    <div class="sub-total">
+                        <table>
+                            <tbody>
+                                <tr class="order-total">
+                                    <th >Общая стоимость:</th>
+                                    <td>
+                                        <strong>
+                                            <span class="amount" id="tot_amount">{{total_amount}} RUB</span>
+                                        </strong>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="wc-proceed-to-checkout">
+                        <p class="return-to-shop">
+                            <a class="button wc-backward" href="{% url 'catalog' %}?value=cat&id=1">в каталог</a>
+                        </p>
+                        <a class="wc-forward" href="{% url 'checkout' %}">Оформить заказ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- shopping-cart  content section end -->
+
+{% endblock content %}

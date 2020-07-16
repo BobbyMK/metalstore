@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>О нас</title>
+{% endblock title %}
+
+{% block content %}
+<!-- pages-title-start -->
+<section class="contact-img-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="con-text">
+                    <h2 class="page-title">О КОМПАНИИ</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- pages-title-end -->
+<!-- about content section start -->
+<section class="main_shop_area">
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="about-us-all">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="about-optima-img">
+                            <img class="primary-image" src={% static "img/about_us.jpg" %} alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="about-optima-text">
+                            <h1> 
+                                <strong>Строй Маркет Металл</strong>
+                            </h1>
+                            <p style="font-family: Geneva, Arial, Helvetica, sans-serif; color: black;">С 2007 года предлагаем нашим клиентам только качественную продукцию, полностью соответствующую требованиям действующих нормативов.
+                            Мы постоянно развиваемся в различных направлениях, стараясь охватить самые востребованные ниши на рынке.
+                            Основным приоритетом нашей деятельности является клиентоориентированность. Мы стремимся полностью обеспечить потребности наших покупателей в качественном металлопрокате
+                             и своевременно выполнить все взятые на себя договорные обязательства.</p>
+                            <ul>
+                                <li>Мы продаем металлопрокат оптом и в розницу.</li>
+                                <li>Мы предлагаем конкурентоспособную стоимость продукции.</li>
+                                <li>Мы - квалифицированный, высокопрофессиональный и отзывчивый персонал.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about  content section end -->
+{% endblock content %}

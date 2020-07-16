@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Оформление заказа</title>
+{% endblock title %}
+
+{% block content %}
+<!-- pages-title-start -->
+<section class="contact-img-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="con-text">
+                    <h2 class="page-title">Оформление заказа</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- pages-title-end -->
+<!-- checkout content section start -->
+<div class="checkout-area">
+    <div class="container">
+        <form id="checkout_form" method="post">{% csrf_token %}
+            <div class="row">
+                <div class="col-md-7 col-sm-12">
+                    <div class="text">
+                        <div class="tab-content">
+                            	<div role="tabpanel" class="tab-pane active" id="home">
+                            	    <div class="row">
+                                        <div class="checkbox-form">
+                                            <div class="col-md-12">
+                                                <h3 class="checkbox9">Контактная информация</h3>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="di-na bs">
+                                                    <label class="l-contact">
+                                                    ФИО
+                                                    <em>*</em>
+                                                    </label>
+                                                    <input class="form-control" type="text" name="{{ form.name.html_name }}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="di-na bs">
+                                                    <label class="l-contact">
+                                                    Email
+                                                    <em>*</em>
+                                                    </label>
+                                                    <input class="form-control" type="email" name="{{ form.email.html_name }}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="di-na bs">
+                                                    <label class="l-contact">
+                                                    Контактный номер
+                                                    <em>*</em>
+                                                    </label>
+                                                    <input class="form-control" type="tel" name="{{ form.phone.html_name }}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label class="l-contact">
+                                                    Адрес доставки
+                                                </label>
+                                                <div class="di-na bs">
+                                                    <input class="form-control" type="text" name="{{ form.address.html_name }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                            	    </div>
+                            	    <div class="row">
+                            	        <div class="col-md-12">
+                            	            <h3 class="checkbox9">КОММЕНТАРИЙ К ЗАКАЗУ</h3>
+                            	        </div>
+                            	        <div class="col-md-12">
+                            	            <div class="di-na bs">
+                            	                <textarea class="input-text " name="{{ form.comment.html_name }}"></textarea>
+                            	            </div>
+                            	        </div>
+                            	        <div class="col-md-12 text-center">
+                            	            <p class="checkout-coupon">
+                            	                <input id="make_order" type="submit" value="ОФОРМИТЬ">
+                            	        </div>
+                            	    </div>
+                            	</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                    <div class="ro-checkout-summary">
+                        <div class="ro-title">
+                            <h3 class="checkbox9">Ваш заказ</h3>
+                        </div>
+                        <div class="ro-body">
+		    				{% for product in products_in_basket %}
+                        	    <div class="ro-item">
+                        	        <div class="ro-image">
+                        	            <img src="{{product.image.image.url}}" alt="">
+                        	        </div>
+                        	            <div class="tb-beg">
+                        	                <a href="#">{{product.product.name}} </a>
+                        	            </div>
+                        	        <div>
+                        	            <div class="ro-price">
+                        	                <span class="amount">{{product.price_per_item}} RUB</span>
+                        	            </div>
+                        	            <div class="ro-quantity">
+                        	                <strong class="product-quantity" value="{{product.nmb}}" name="product_in_basket_{{ product.id }}">{{product.nmb}}</strong>
+                        	            </div>
+                        	            <div class="product-total">
+                        	                <span class="amount">{{product.total_price}} RUB</span>
+                        	            </div>
+                        	        </div>
+                        	    </div>
+		    				{% endfor %}
+                        </div>
+                        <div class="ro-footer">
+                            <div>
+                                <p>
+                                    Доставка
+                                    <span>
+                                        <span class="amount">Рассчитывается индивидуально</span>
+                                    </span>
+                                </p>
+                                <div class="ro-divide"></div>
+                            </div>
+                            <div>
+                                <p>
+                                    К ОПЛАТЕ
+                                    <span>
+                                        <strong>
+                                            <span class="amount">{{ total_amount }} RUB</span>
+                                        </strong>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- checkout  content section end -->
+
+{% endblock content %}

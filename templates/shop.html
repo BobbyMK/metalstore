@@ -1,0 +1,218 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Каталог</title>
+{% endblock title %}
+
+{% block content %}
+<!-- pages-title-start -->
+<section class="contact-img-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="con-text">
+                    <h2 class="page-title">Каталог</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- pages-title-end -->
+<!-- shop-style content section start -->
+<section class="pages products-page section-padding-top">
+	<div class="container">
+		<div class="row">
+		    <div class="col-md-4 col-lg-3 col-sm-12">
+                <div class="all-shop-sidebar">
+                    <div class="shop-one">
+                        <a href="{% url 'catalog' %}?value=cat&id=1"><h3 class="wg-title2">Арматура</h3></a>
+                        <ul class="product-categories">
+                            <li class="cat-item">
+                                <a href="{% url 'catalog' %}?value=sub&id=1">Арматура А1</a>
+                            </li>
+                            <li class="cat-item">
+                                <a href="{% url 'catalog' %}?value=sub&id=2">Арматура А3</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="shop-one">
+                        <a href="{% url 'catalog' %}?value=cat&id=2"><h3 class="wg-title2">Труба</h3></a>
+                        <ul class="product-categories">
+                            <li class="cat-item">
+                                <a href="{% url 'catalog' %}?value=sub&id=3">Труба профильная</a>
+                            </li>
+                            <li class="cat-item">
+                                <a href="{% url 'catalog' %}?value=sub&id=4">Труба ВГП</a>
+                            </li>
+                            <li class="cat-item-10">
+                                <a href="{% url 'catalog' %}?value=sub&id=5">Труба электросварная</a>
+                            </li>
+                            <li class="cat-item">
+                                <a href="{% url 'catalog' %}?value=sub&id=6">Труба оцинкованная</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="shop-one re-shop-one">
+                        <a href="{% url 'catalog' %}?value=cat&id=3"><h3 class="wg-title2">Лист</h3></a>
+                        <ul class="product-categories">
+                            <li class="cat-item cat-item-11">
+                                <a href="{% url 'catalog' %}?value=sub&id=7">Лист холоднокатаный</a>
+                            </li>
+                            <li class="cat-item cat-item-8">
+                                <a href="{% url 'catalog' %}?value=sub&id=8">Лист горячекатаный</a>
+                            </li>
+                            <li class="cat-item cat-item-8">
+                                <a href="{% url 'catalog' %}?value=sub&id=9">Лист оцинкованный</a>
+                            </li>
+                            <li class="cat-item cat-item-8">
+                                <a href="{% url 'catalog' %}?value=sub&id=10">Лист рифленый</a>
+                            </li>
+                            <li class="cat-item cat-item-8">
+                                <a href="{% url 'catalog' %}?value=sub&id=11">Лист просечно-вытяжной</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="shop-one">
+                        <a href="{% url 'catalog' %}?value=cat&id=4"><h3 class="wg-title2">Сетка</h3></a>
+                        <ul class="product-categories">
+                            <li class="cat-item">
+                                <a href="{% url 'catalog' %}?value=sub&id=12">Сетка в картах</a>
+                            </li>
+                            <li class="cat-item">
+                                <a href="{% url 'catalog' %}?value=sub&id=13">Сетка ЦПВС</a>
+                            </li>
+                            <li class="cat-item-10">
+                                <a href="{% url 'catalog' %}?value=sub&id=14">Сетка сварная</a>
+                            </li>
+                            <li class="cat-item">
+                                <a href="{% url 'catalog' %}?value=sub&id=15">Сетка рабица</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="shop-one"></a>
+                        <a href="{% url 'catalog' %}?value=cat&id=5"><h3 class="wg-title2">Швеллер</h3></a>
+                    </div>
+                    <div class="shop-one">
+                        <a href="{% url 'catalog' %}?value=cat&id=6"><h3 class="wg-title2">Уголок</h3></a>
+                    </div>
+                    <div class="shop-one">
+                        <a href="{% url 'catalog' %}?value=cat&id=7"><h3 class="wg-title2">Квадрат</h3></a>
+                    </div>
+                    <div class="shop-one">
+                        <a href="{% url 'catalog' %}?value=cat&id=8"><h3 class="wg-title2">Полоса</h3></a>
+                    </div>
+                    <div class="shop-one">
+                        <a href="{% url 'catalog' %}?value=cat&id=9"><h3 class="wg-title2">Круг</h3></a>
+                    </div>
+                    <div class="shop-one">
+                        <a href="{% url 'catalog' %}?value=cat&id=10"><h3 class="wg-title2">Проволока</h3></a>
+                    </div>
+                    <div class="shop-one">
+                        <a href="{% url 'catalog' %}?value=cat&id=11"><h3 class="wg-title2">Профнастил</h3></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-9 col-sm-12">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="features-tab">
+                          <!-- Nav tabs -->
+                            <div class="shop-all-tab">
+                                <div class="two-part">
+                                    <ul class="nav tabs" role="tablist">
+                                        <li class="vali">Вид :</li>
+                                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-th-large"></i></a></li>
+                                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-align-justify"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                          <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="home">
+                                    <div class="row">
+                                        <div class="shop-tab">
+                                            {% for product_image in products_images_armatura %}
+                                                <div class="col-md-4 col-lg-4 col-sm-6">
+                                                    <div class="single-product", style="margin-top: 20% !important;">
+                                                        <div class="product-img">
+                                                            <a href="#">
+                                                                <img src={{ product_image.image.url }} alt="Product Title" />
+                                                                <img class="secondary-image" alt="Product Title" src={{ product_image.image.url }}>
+                                                            </a>
+                                                        </div>
+                                                        <div class="product-dsc">
+                                                            <h3><a href="#">{{ product_image.product.name }}</a></h3>
+                                                            <div class="star-price">
+                                                                <span class="price-left">{{ product_image.product.price }} RUB</span>
+                                                            </div>
+                                                        </div>
+                                                        <form id="form_input" class="form-inline" class="col-md-2" action="{% url 'basket_adding' %}">{% csrf_token %}
+                                                            <input type="number" class="form-control" id="number" placeholder="Количество">
+                                                            <div class="form-group">
+                                                                <button type="submit" class="btn btn-outline-danger"
+                                                                    id="submit_btn" data-product_id="{{product_image.product.id}}" data-image="{{product_image.id}}" data-name="{{product_image.product.name}}" data-price="{{product_image.product.price}}">
+                                                                    в корзину
+                                                                </button>
+                                                            </div>
+                                                            Общая сумма: <span id="summ"></span>
+                                                        </form>
+                                                        <!--<div class="actions-btn">
+                                                            <a href="#" data-toggle="tooltip" type="submit" data-placement="top" title="Add To Cart"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div>-->
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="profile">
+                                    <div class="row">
+                                        {% for product_image in products_images_armatura %}
+                                            <div class="li-item">
+                                                <div class="col-md-3 col-sm-4">
+                                                    <div class="tb-product-item-inner tb2 pct-last">
+                                                        <div class="re-img">
+                                                            <img src={{ product_image.image.url }} alt="Product Title" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-9 col-sm-8">
+                                                    <div class="f-fix">
+                                                        <div class="tb-beg">
+                                                            <a href="#">{{ product_image.product.name }}</a>
+                                                        </div>
+                                                        <div class="tb-product-wrap-price-rating">
+                                                            <div class="tb-product-price font-noraure-3">
+                                                                <span class="price-left">{{ product_image.product.price }} RUB</span>
+                                                            </div>
+                                                        </div>
+                                                        <form id="form_input" class="form-inline" class="col-md-2" action="{% url 'basket_adding' %}">{% csrf_token %}
+                                                            <input type="number" class="form-control list_nmb" id="number" placeholder="Количество">
+                                                            <div class="form-group">
+                                                                Общая сумма: <span id="summ"></span>
+                                                                <button type="submit" class="btn btn-outline-danger btn_list"
+                                                                    id="submit_btn" data-product_id="{{product_image.product.id}}" data-image="{{product_image.id}}" data-name="{{product_image.product.name}}" data-price="{{product_image.product.price}}">
+                                                                    в корзину
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop-all-tab-cr shop-bottom">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</section>
+<!-- shop-style  content section end -->
+{% endblock content %}

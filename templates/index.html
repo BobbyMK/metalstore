@@ -1,0 +1,239 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Главная</title>
+{% endblock title %}
+
+{% block content %}
+        <!-- slider-section-start -->
+        <section class="slider-main-area">
+            <div class="main-slider an-si">
+                <div class="bend niceties preview-2 hm-ver-1">
+                    <div id="ensign-nivoslider-2" class="slides">
+                        <img src="{% static 'img/banner_1.jpg' %} " alt="" title="#slider-direction-3"  />
+                        <img src="{% static 'img/banner_2.jpg' %} " alt="" title="#slider-direction-1"  />
+                        <img src="{% static 'img/banner_3.jpg' %} " alt="" title="#slider-direction-1"  />
+                    </div3
+                    <!-- direction 1 -->
+                    <div id="slider-direction-3" class="t-cn slider-direction Builder">
+                        <div class="slide-all">
+                            <!-- layer 1 -->
+                            <div class="layer-1">
+                                <h2 class="title5">Строй Маркет Металл</h2>
+                            </div>
+                            <!-- layer 2 -->
+                            <div class="layer-2">
+                                <h2 class="title6">Металлопрокат</h2>
+                            </div>
+                            <!-- layer 2 -->
+                            <div class="layer-2">
+                                <p class="title0">Оптом и в розницу</p>
+                            </div>
+                            <!-- layer 3 -->
+                            <div class="layer-3">
+                                <a class="min1" href="{% url 'catalog' %}?value=cat&id=1">Каталог</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="slider-direction-1" class="t-cn slider-direction Builder">
+                        <div class="slide-all slide2">
+                            <!-- layer 1 -->
+                            <div class="layer-1">
+                                <h2 class="title5">Строй Маркет Металл</h2>
+                            </div>
+                            <!-- layer 2 -->
+                            <div class="layer-2">
+                                <h2 class="title6">Металлопрокат</h2>
+                            </div>
+                            <!-- layer 2 -->
+                            <div class="layer-2">
+                                <p class="title0">Оптом и в розницу</p>
+                            </div>
+                            <!-- layer 3 -->
+                            <div class="layer-3">
+                                <a class="min1" href="{% url 'catalog' %}?value=cat&id=1">Каталог</a>
+                            </div>
+                        </div>
+                    </div>
+			    </div>
+            </div>
+        </section>
+		<!-- slider section end -->
+        <!-- new-products section start -->
+		<section class="featured-products single-products section-padding-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="section-title">
+							<h3>АССОРТИМЕНТ</h3>
+							<div class="section-icon">
+                                <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                            </div>
+						</div>
+					</div>
+				</div>
+				<div class="row tab-content">
+					<div class="tab-pane  fade in active" id="all">
+						<div id="tab-carousel-1" class="re-owl-carousel owl-carousel product-slider owl-theme">
+							<div class="col-xs-12">
+								<div class="single-product">
+                                    <div class="product-img">
+                                        <a href="{% url 'catalog' %}?value=cat&id=1">
+                                            <img src="{% static 'media/static/img/products_images/01.png' %}" alt="Product Title" /> <!-- editted here -->
+                                        </a>
+                                    </div>
+                                    <div class="product-dsc">
+                                        <h3><a href="{% url 'catalog' %}?value=cat&id=1">Арматура</a></h3>
+                                    </div>
+                                </div>
+								<div class="single-product margin-top">
+                                    <div class="product-img">
+                                        <a href="{% url 'catalog' %}?value=cat&id=2">
+                                            <img src="{% static 'media/static/img/products_images/02.png' %}" alt="Product Title" />
+                                        </a>
+                                    </div>
+                                    <div class="product-dsc">
+                                        <h3><a href="{% url 'catalog' %}?value=cat&id=2">Труба</a></h3>
+                                    </div>
+                                </div>
+							</div>
+							<!-- single product end -->
+							<div class="col-xs-12">
+								<div class="single-product">
+                                    <div class="product-img">
+                                        <a href="{% url 'catalog' %}?value=cat&id=3">
+                                            <img src="{% static 'media/static/img/products_images/03.png' %}" alt="Product Title" />
+                                        </a>
+                                    </div>
+                                    <div class="product-dsc">
+                                        <h3><a href="{% url 'catalog' %}?value=cat&id=3">Лист</a></h3>
+                                    </div>
+                                </div>
+								<div class="single-product margin-top">
+                                    <div class="product-img">
+                                        <a href="{% url 'catalog' %}?value=cat&id=4">
+                                            <img src="{% static 'media/static/img/products_images/04.png' %}" alt="Product Title" />
+                                        </a>
+                                    </div>
+                                    <div class="product-dsc">
+                                        <h3><a href="{% url 'catalog' %}?value=cat&id=4">Сетка</a></h3>
+                                    </div>
+                                </div>
+							</div>
+							<!-- single product end -->
+							<div class="col-xs-12">
+								<div class="single-product">
+                                    <div class="product-img">
+                                        <a href="{% url 'catalog' %}?value=cat&id=5">
+                                            <img src="{% static 'media/static/img/products_images/05.png' %}" alt="Product Title" />
+                                        </a>
+                                    </div>
+                                    <div class="product-dsc">
+                                        <h3><a href="{% url 'catalog' %}?value=cat&id=5">Швеллер</a></h3>
+                                    </div>
+                                </div>
+								<div class="single-product margin-top">
+                                    <div class="product-img">
+                                        <a href="{% url 'catalog' %}?value=cat&id=6">
+                                            <img src="{% static 'media/static/img/products_images/ugolok877.png' %}" alt="Product Title" />
+                                        </a>
+                                    </div>
+                                    <div class="product-dsc">
+                                        <h3><a href="{% url 'catalog' %}?value=cat&id=6">Уголок</a></h3>
+                                    </div>
+                                </div>
+							</div>
+							<!-- single product end -->
+							<div class="col-xs-12">
+								<div class="single-product">
+                                    <div class="product-img">
+                                        <a href="{% url 'catalog' %}?value=cat&id=7">
+                                            <img src="{% static 'media/static/img/products_images/07.png' %}" alt="Product Title" />
+                                        </a>
+                                    </div>
+                                    <div class="product-dsc">
+                                        <h3><a href="{% url 'catalog' %}?value=cat&id=7">Квадрат</a></h3>
+                                    </div>
+                                </div>
+								<div class="single-product margin-top">
+                                    <div class="product-img">
+                                        <a href="{% url 'catalog' %}?value=cat&id=8">
+                                            <img src="{% static 'media/static/img/products_images/08.png' %}" alt="Product Title" />
+                                        </a>
+                                    </div>
+                                    <div class="product-dsc">
+                                        <h3><a href="{% url 'catalog' %}?value=cat&id=8">Круг</a></h3>
+                                    </div>
+                                </div>
+							</div>
+							<!-- single product end -->
+							<div class="col-xs-12">
+								<div class="single-product">
+                                    <div class="product-img">
+                                        <a href="{% url 'catalog' %}?value=cat&id=9">
+                                            <img src="{% static 'media/static/img/products_images/09.png' %}" alt="Product Title" />
+                                        </a>
+                                    </div>
+                                    <div class="product-dsc">
+                                        <h3><a href="{% url 'catalog' %}?value=cat&id=9">Полоса</a></h3>
+                                    </div>
+                                </div>
+								<div class="single-product margin-top">
+                                    <div class="product-img">
+                                        <a href="{% url 'catalog' %}?value=cat&id=11">
+                                            <img src="{% static 'media/static/img/products_images/011.png' %}" alt="Product Title" />
+                                        </a>
+                                    </div>
+                                    <div class="product-dsc">
+                                        <h3><a href="{% url 'catalog' %}?value=cat&id=11">Профнастил</a></h3>
+                                    </div>
+                                </div>
+							</div>
+							<!-- single product end -->
+						</div>
+					</div>
+					<!-- category end -->
+				</div>
+			</div>
+		</section>
+		<!-- new-products section end -->
+        <!-- testimonials section start -->
+		<section class="testimonials stripe-parallax-bg" data-parallax-speed="0.5">
+			<div class="re-testimonials">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="section-title re-section-title">
+                                <h3>О КОМПАНИИ</h3>
+                                <div class="section-icon re-section1">
+                                    <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-10 col-text-center text-center">
+                            <div id="testimonials" class="re-owl-carousel2 owl-carousel product-slider owl-theme">
+                                <div class="single-testimonial">
+                                    <div class="testimonial-dsc">
+                                        <p>С 2007 года предлагаем нашим клиентам только качественную продукцию, полностью соответствующую требованиям действующих нормативов.
+                                            Мы постоянно развиваемся в различных направлениях, стараясь охватить самые востребованные ниши на рынке.
+                                            Основным приоритетом нашей деятельности является клиентоориентированность. Мы стремимся полностью обеспечить потребности наших покупателей в качественном металлопрокате
+                                            и своевременно выполнить все взятые на себя договорные обязательства.</p>
+                                    </div>
+                                    <div class="testimonial-img">
+                                        <span>Мы продаем металлопрокат оптом и в розницу.</span>
+                                        <span>Мы предлагаем конкурентоспособную стоимость продукции.</span>
+                                        <span>Мы - квалифицированный, высокопрофессиональный и отзывчивый персонал.</span>
+                                    </div>
+                                </div>
+                                <!-- single testimonial item end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</section>
+        <!-- testimonials section end -->
+{% endblock content %}
